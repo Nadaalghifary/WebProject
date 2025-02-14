@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <title>Sign Up and Login</title>
+    <style>
+        body {
+            background-color: #04340d7a;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            width: 100%;
+        }
+        .card {
+            height: auto;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #8888887f;
+            color: #ffffff;
+            border-radius: 10px;
+            border: 2px solid #ffffff;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        p {
+            color: white;
+        }
+        .form-control {
+            height: 50px;
+        }
+        .btn-custom {
+            background-color: #04340d;
+            color: #ffffff;
+        }
+        .btn-custom:hover {
+            background-color: #04340d;
+        }
+        .btn-google {
+            background-color: #2d2d2d;
+            color: #ffffff;
+        }
+        .btn-google:hover {
+            background-color: #357AE8;
+        }
+        .toggle-btn {
+            cursor: pointer;
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+    <!-- Load Google Sign-In Library -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="row">
+            <!-- Login/Sign-Up Card -->
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- Login Section -->
+                        <div id="login-section">
+                            <p class="welcome text-center">Welcome back! Please log in to your account.</p>
+                            <br>
+                            <div class="row justify-content-center">
+                                <div class="col-md-6">
+                                    <form id="loginForm">
+                                        <h1 class="text-center">Login</h1>
+                                        <input type="email" class="form-control mt-2" placeholder="Email" id="login-email" required />
+                                        <input type="password" class="form-control mt-2" placeholder="Password" id="login-password" required />
+                                        <button type="submit" class="btn btn-custom w-100 mt-3">Log In</button>
+                                    </form>
+                                    <div class="text-center mt-3">
+                                        <button id="googleLoginBtn" class="btn btn-google w-100 mt-2" type="button">
+                                            <i class="fa-brands fa-google"></i> Log in with Google
+                                        </button>
+                                        <p class="mt-3">
+                                            Don't have an account? 
+                                            <span class="toggle-btn" onclick="toggleSection('signup')">Sign Up</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sign-Up Section -->
+                        <div id="signup-section" style="display: none;">
+                            <p class="welcome text-center">Create a new account below.</p>
+                            <br>
+                            <div class="row justify-content-center">
+                                <div class="col-md-6">
+                                    <form id="signupForm">
+                                        <h1 class="text-center">Sign Up</h1>
+                                        <input type="text" class="form-control mt-2" placeholder="Full Name" id="signup-name" required />
+                                        <input type="email" class="form-control mt-2" placeholder="Email" id="signup-email" required />
+                                        <input type="password" class="form-control mt-2" placeholder="Password" id="signup-password" required />
+                                        <button type="submit" class="btn btn-custom w-100 mt-3">Sign Up</button>
+                                    </form>
+                                    <div class="text-center mt-3">
+                                        <button id="googleSignupBtn" class="btn btn-google w-100 mt-2" type="button">
+                                            <i class="fa-brands fa-google"></i> Sign Up with Google
+                                        </button>
+                                        <p class="mt-3">
+                                            Already have an account? 
+                                            <span class="toggle-btn" onclick="toggleSection('login')">Log In</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Toggle between login and signup sections
+        function toggleSection(section) {
+            const loginSection = document.getElementById('login-section');
+            const signupSection = document.getElementById('signup-section');
+    
+            if (section === 'login') {
+                loginSection.style.display = 'block';
+                signupSection.style.display = 'none';
+            } else {
+                loginSection.style.display = 'none';
+                signupSection.style.display = 'block';
+            }
+        }
+    
+        function handleCredentialResponse(response) {
+    console.log("Encoded JWT ID token: " + response.credential);
+
+    fetch('login.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: `credential=${response.credential}` // Send the token to the backend
+    })
+    .then(response => response.json()) // Ensure JSON response parsing
+    .then(data => {
+        if (data.status === 'success') {
+            // Redirect to index.html on success
+            alert(data.message); // Optional: Show a welcome message
+            window.location.href = "index.html"; // Ensure 'index.html' exists in the project root
+        } else {
+            // Handle errors
+            alert("Login failed: " + data.message);
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("An unexpected error occurred. Please try again.");
+    });
+}
+
+    
+        // Initialize Google Sign-In
+        window.onload = function () {
+            google.accounts.id.initialize({
+                client_id: "566360220617-fgq8p39jnvrb5g8h6ml5i75cqhhd7hmf.apps.googleusercontent.com", // Replace with your actual Google Client ID
+                callback: handleCredentialResponse,
+            });
+    
+            // Render the Google Sign-In button for Login
+            google.accounts.id.renderButton(
+                document.getElementById("googleLoginBtn"),
+                { theme: "outline", size: "large" }
+            );
+    
+            // Render the Google Sign-In button for Sign-Up
+            google.accounts.id.renderButton(
+                document.getElementById("googleSignupBtn"),
+                { theme: "outline", size: "large" }
+            );
+    
+            // Prompt user to sign in automatically if available
+            google.accounts.id.prompt(); 
+        };
+    </script>
+    
+</body>
+</html> 

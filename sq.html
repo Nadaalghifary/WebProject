@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch the Square</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+        }
+
+        .game-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            border: 3px solid #333;
+            background-color: #e6f7ff;
+        }
+
+        .square {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #ff5733;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .score {
+            margin-top: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="game-container">
+            <div class="square" id="square"></div>
+        </div>
+        <div class="score" id="score">Score: 0</div>
+    </div>
+
+    <script>
+        const square = document.getElementById('square');
+        const scoreDisplay = document.getElementById('score');
+        const gameContainer = document.querySelector('.game-container');
+        let score = 0;
+
+        // Function to generate random position
+        function getRandomPosition() {
+            const containerRect = gameContainer.getBoundingClientRect();
+            const x = Math.random() * (containerRect.width - 50); // Subtract square width
+            const y = Math.random() * (containerRect.height - 50); // Subtract square height
+            return { x, y };
+        }
+
+        // Function to move the square
+        function moveSquare() {
+            const { x, y } = getRandomPosition();
+            square.style.left = `${x}px`;
+            square.style.top = `${y}px`;
+        }
+
+        // Event listener for square click
+        square.addEventListener('click', () => {
+            score++;
+            scoreDisplay.textContent = `Score: ${score}`;
+            moveSquare();
+        });
+
+        // Initial position
+        moveSquare();
+    </script>
+</body>
+</html>

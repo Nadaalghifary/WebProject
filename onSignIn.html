@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login with Google</title>
+</head>
+<body>
+    <h1>Login with Google</h1>
+
+    <!-- Google login button -->
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+    <script>
+        // This function is triggered when the user logs in with Google
+        function onSignIn(googleUser) {
+            const idToken = googleUser.getAuthResponse().id_token;
+
+            // Send the ID token to your server for verification
+            fetch('http://localhost:3000/verify-token', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ id_token: idToken }),
+            })
+            .then(response => response.json())
+            .then(data => console.log('User Info:', data))
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+
+    <script>
+        // Initialize the Google Sign-In client with your Client ID
+        function initGoogleSignIn() {
+            gapi.load('auth2', function() {
+                gapi.auth2.init({
+                    client_id: '566360220617-fgq8p39jnvrb5g8h6ml5i75cqhhd7hmf.apps.googleusercontent.com'  // Replace with your Google Client ID
+                });
+            });
+        }
+    </script>
+
+    <script async defer src="https://apis.google.com/js/platform.js?onload=initGoogleSignIn"></script>
+</body>
+</html>

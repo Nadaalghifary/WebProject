@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Cup Teams</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .section {
+      display: none;
+    }
+    .section.active {
+      display: block;
+    }
+    .team-header {
+      margin-top: 20px;
+    }
+    .card-img-top {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">World Cup Teams</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('brazilSection')">Brazil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('argentinaSection')">Argentina</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('franceSection')">France</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('germanySection')">Germany</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('spainSection')">Spain</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('italySection')">Italy</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('englandSection')">England</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('netherlandsSection')">Netherlands</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('portugalSection')">Portugal</a></li>
+  
+
+
+        </ul>
+      </div>
+      <form class="form-inline ml-auto" onsubmit="searchTeams(event)">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search for teams" id="searchInput" aria-label="Search">
+      </form>
+    </nav>
+
+    <!-- Brazil Section -->
+    <div id="brazilSection" class="section active">
+      <div class="team-header text-center mb-4">
+        <h1>Brazil</h1>
+        <p>Brazil is one of the most successful teams in World Cup history, known for their attacking style.</p>
+      </div>
+      <div class="card mb-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg" class="card-img-top" alt="Brazil Flag">
+        <div class="card-body">
+          <h5 class="card-title">Coach</h5>
+          <p>Tite</p>
+        </div>
+      </div>
+      <h3>Upcoming Matches</h3>
+      <ul class="list-group">
+        <li class="list-group-item">2024-11-29: Brazil vs Argentina</li>
+        <li class="list-group-item">2024-12-02: Brazil vs Portugal</li>
+      </ul>
+      <h3>Players</h3>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Neymar_2019.jpg" class="card-img-top" alt="Neymar">
+            <div class="card-body">
+              <h5 class="card-title">Neymar</h5>
+              <p class="card-text">Position: Forward</p>
+              <p class="card-text">Age: 32</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Philippe_Coutinho_2018.jpg" class="card-img-top" alt="Philippe Coutinho">
+            <div class="card-body">
+              <h5 class="card-title">Philippe Coutinho</h5>
+              <p class="card-text">Position: Midfielder</p>
+              <p class="card-text">Age: 32</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Argentina Section -->
+    <div id="argentinaSection" class="section">
+      <div class="team-header text-center mb-4">
+        <h1>Argentina</h1>
+        <p>Argentina is known for their strong defense and technical football, led by legendary players.</p>
+      </div>
+      <div class="card mb-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg" class="card-img-top" alt="Argentina Flag">
+        <div class="card-body">
+          <h5 class="card-title">Coach</h5>
+          <p>Lionel Scaloni</p>
+        </div>
+      </div>
+      <h3>Upcoming Matches</h3>
+      <ul class="list-group">
+        <li class="list-group-item">2024-11-30: Argentina vs France</li>
+        <li class="list-group-item">2024-12-03: Argentina vs Germany</li>
+      </ul>
+      <h3>Players</h3>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Lionel_Messi_2020.jpg" class="card-img-top" alt="Lionel Messi">
+            <div class="card-body">
+              <h5 class="card-title">Lionel Messi</h5>
+              <p class="card-text">Position: Forward</p>
+              <p class="card-text">Age: 37</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Di_Maria_2018.jpg" class="card-img-top" alt="Angel Di Maria">
+            <div class="card-body">
+              <h5 class="card-title">Angel Di Maria</h5>
+              <p class="card-text">Position: Forward</p>
+              <p class="card-text">Age: 36</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more sections for other teams here -->
+
+  </div>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(sectionId).classList.add('active');
+    }
+
+    function searchTeams(event) {
+      event.preventDefault();
+      const searchInput = document.getElementById('searchInput').value.toLowerCase();
+      const teams = document.querySelectorAll('.nav-link');
+
+      teams.forEach(team => {
+        if (team.innerText.toLowerCase().includes(searchInput)) {
+          team.style.display = "block";
+        } else {
+          team.style.display = "none";
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="World Cup 2024 - Teams" />
+    <meta name="author" content="" />
+    <title>World Cup 2024 - Teams</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core Theme CSS -->
+     <link href="css/styles.css" rel="stylesheet" />
+     <link rel="stylesheet" href="css/navbar.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+   
+   
+    <style>
+           .team-card {
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.813);
+            transition: transform 0.6s;
+            margin-bottom: 30px;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+        .team-logo {
+            width: 100%;
+            height: auto;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #005430;
+        }
+       
+         
+    </style>
+</head>
+<body class="d-flex flex-column h-100">
+   <!-- Navigation -->
+   <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container px-5">
+        <a class="navbar-brand" href="index.html">World Cup 2024</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="hostcountry.html">Host Country</a></li>
+                <li class="nav-item"><a class="nav-link" href="index2.html">Schedule</a></li>
+                <li class="nav-item"><a class="nav-link" href="team.html">Teams</a></li>
+                <li class="nav-item"><a class="nav-link" href="index3.html">Tickets</a></li>
+                <li class="nav-item"><a class="nav-link" href="stadiums.html">Stadiums</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">Latest News</a></li>
+                <li class="nav-item"><a class="nav-link" href="shoppage.html">Shop</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- Teams Section -->
+    <div class="container py-5">
+        <h2 class="section-title">Participating Teams</h2>
+        <div class="row justify-content-center">
+
+            <!-- Qatar -->
+            <div class="col-md-4">
+                <div class="card team-card">
+                    <img src="images/flag/Qatar512.png" class="card-img-top team-logo" alt="Qatar Logo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Qatar</h5>
+                        <p class="card-text">Coach: Felix Sanchez</p>
+                        <p class="card-text">FIFA Ranking: 50</p>
+                        <div class="social-icons">
+                            <a href="https://twitter.com/QatarFootball" target="_blank"><i class="bi bi-twitter"></i></a>
+                            <a href="https://www.instagram.com/qatarfootball" target="_blank"><i class="bi bi-instagram"></i></a>
+                        </div>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#teamDetailsModal-Qatar">More Details</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal for Qatar -->
+            <div class="modal fade" id="teamDetailsModal-Qatar" tabindex="-1" aria-labelledby="teamDetailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="teamDetailsModalLabel">Qatar Team Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>Key Players:</strong> Player A, Player B</p>
+                            <p><strong>Past World Cup Performance:</strong> 2022 - Group Stage</p>
+                            <p><strong>FIFA History:</strong> Best Result: Quarter-finals (1970)</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Netherlands -->
+            <div class="col-md-4">
+                <div class="card team-card">
+                    <img src="images/flag/Netherlands512.png" class="card-img-top team-logo" alt="Netherlands Logo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Netherlands</h5>
+                        <p class="card-text">Coach: Louis van Gaal</p>
+                        <p class="card-text">FIFA Ranking: 8</p>
+                        <div class="social-icons">
+                            <a href="https://twitter.com/OnsOranje" target="_blank"><i class="bi bi-twitter"></i></a>
+                            <a href="https://www.instagram.com/onsoranje/" target="_blank"><i class="bi bi-instagram"></i></a>
+                        </div>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#teamDetailsModal-Netherlands">More Details</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal for Netherlands -->
+            <div class="modal fade" id="teamDetailsModal-Netherlands" tabindex="-1" aria-labelledby="teamDetailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="teamDetailsModalLabel">Netherlands Team Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>Key Players:</strong> Player C, Player D</p>
+                            <p><strong>Past World Cup Performance:</strong> 2014 - Runners-up</p>
+                            <p><strong>FIFA History:</strong> Best Result: Runners-up (1974, 1978, 2010)</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portugal -->
+            <div class="col-md-4">
+                <div class="card team-card">
+                    <img src="images/flag/Portugal512.png" class="card-img-top team-logo" alt="Portugal Logo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Portugal</h5>
+                        <p class="card-text">Coach: Fernando Santos</p>
+                        <p class="card-text">FIFA Ranking: 5</p>
+                        <div class="social-icons">
+                            <a href="https://twitter.com/selecaoportugal" target="_blank"><i class="bi bi-twitter"></i></a>
+                            <a href="https://www.instagram.com/selecaoportugal/" target="_blank"><i class="bi bi-instagram"></i></a>
+                        </div>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#teamDetailsModal-Portugal">More Details</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal for Portugal -->
+            <div class="modal fade" id="teamDetailsModal-Portugal" tabindex="-1" aria-labelledby="teamDetailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="teamDetailsModalLabel">Portugal Team Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>Key Players:</strong> Player E, Player F</p>
+                            <p><strong>Past World Cup Performance:</strong> 1966 - Third Place</p>
+                            <p><strong>FIFA History:</strong> Best Result: Third Place (1966)</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brazil -->
+            <div class="col-md-4">
+                <div class="card team-card">
+                    <img src="images/flag/Brazil512.png" class="card-img-top team-logo" alt="Brazil Logo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Brazil</h5>
+                        <p class="card-text">Coach: Tite</p>
+                        <p class="card-text">FIFA Ranking: 3</p>
+                        <div class="social-icons">
+                            <a href="https://twitter.com/CBF_Futebol" target="_blank"><i class="bi bi-twitter"></i></a>
+                            <a href="https://www.instagram.com/cbf_futebol/" target="_blank"><i class="bi bi-instagram"></i></a>
+                        </div>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#teamDetailsModal-Brazil">More Details</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal for Brazil -->
+            <div class="modal fade" id="teamDetailsModal-Brazil" tabindex="-1" aria-labelledby="teamDetailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="teamDetailsModalLabel">Brazil Team Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>Key Players:</strong> Player G, Player H</p>
+                            <p><strong>Past World Cup Performance:</strong> 2002 - Champions</p>
+                            <p><strong>FIFA History:</strong> Best Result: Champions (1958, 1962, 1970, 1994, 2002)</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Germany -->
+            <div class="col-md-4">
+                <div class="card team-card">
+                    <img src="images/flag/Germany512.png" class="card-img-top team-logo" alt="Germany Logo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Germany</h5>
+                        <p class="card-text">Coach: Hansi Flick</p>
+                        <p class="card-text">FIFA Ranking: 6</p>
+                        <div class="social-icons">
+                            <a href="https://twitter.com/DFB_Team" target="_blank"><i class="bi bi-twitter"></i></a>
+                            <a href="https://www.instagram.com/dfb_team/" target="_blank"><i class="bi bi-instagram"></i></a>
+                        </div>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#teamDetailsModal-Germany">More Details</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal for Germany -->
+            <div class="modal fade" id="teamDetailsModal-Germany" tabindex="-1" aria-labelledby="teamDetailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="teamDetailsModalLabel">Germany Team Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>Key Players:</strong> Player I, Player J</p>
+                            <p><strong>Past World Cup Performance:</strong> 2014 - Champions</p>
+                            <p><strong>FIFA History:</strong> Best Result: Champions (1954, 1974, 1990, 2014)</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Argentina -->
+            <div class="col-md-4">
+                <div class="card team-card">
+                    <img src="images/flag/Argentina512.png" class="card-img-top team-logo" alt="Argentina Logo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Argentina</h5>
+                        <p class="card-text">Coach: Lionel Scaloni</p>
+                        <p class="card-text">FIFA Ranking: 1</p>
+                        <div class="social-icons">
+                            <a href="https://twitter.com/Argentina" target="_blank"><i class="bi bi-twitter"></i></a>
+                            <a href="https://www.instagram.com/argentina/" target="_blank"><i class="bi bi-instagram"></i></a>
+                        </div>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#teamDetailsModal-Argentina">More Details</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal for Argentina -->
+            <div class="modal fade" id="teamDetailsModal-Argentina" tabindex="-1" aria-labelledby="teamDetailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="teamDetailsModalLabel">Argentina Team Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>Key Players:</strong> Player K, Player L</p>
+                            <p><strong>Past World Cup Performance:</strong> 2022 - Champions</p>
+                            <p><strong>FIFA History:</strong> Best Result: Champions (1978, 1986, 2022)</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- Spain -->
+             <div class="col-md-4">
+                <div class="card team-card">
+                    <img src="images/flag/Spain512.png" class="card-img-top team-logo" alt="Spain Logo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Spain</h5>
+                        <p class="card-text">Coach: Luis Enrique</p>
+                        <p class="card-text">FIFA Ranking: 7</p>
+                        <div class="social-icons">
+                            <a href="https://twitter.com/SeFutbol" target="_blank"><i class="bi bi-twitter"></i></a>
+                            <a href="https://www.instagram.com/sefutbol/" target="_blank"><i class="bi bi-instagram"></i></a>
+                        </div>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#teamDetailsModal-Spain">More Details</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal for Spain -->
+            <div class="modal fade" id="teamDetailsModal-Spain" tabindex="-1" aria-labelledby="teamDetailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="teamDetailsModalLabel">Spain Team Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>Key Players:</strong> Player O, Player P</p>
+                            <p><strong>Past World Cup Performance:</strong> 2010 - Champions</p>
+                            <p><strong>FIFA History:</strong> Best Result: Champions (2010)</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- England -->
+            <div class="col-md-4">
+                <div class="card team-card">
+                    <img src="images/flag/England512.png" class="card-img-top team-logo" alt="England Logo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">England</h5>
+                        <p class="card-text">Coach: Gareth Southgate</p>
+                        <p class="card-text">FIFA Ranking: 4</p>
+                        <div class="social-icons">
+                            <a href="https://twitter.com/England" target="_blank"><i class="bi bi-twitter"></i></a>
+                            <a href="https://www.instagram.com/england/" target="_blank"><i class="bi bi-instagram"></i></a>
+                        </div>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#teamDetailsModal-England">More Details</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal for England -->
+            <div class="modal fade" id="teamDetailsModal-England" tabindex="-1" aria-labelledby="teamDetailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="teamDetailsModalLabel">England Team Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>Key Players:</strong> Player S, Player T</p>
+                            <p><strong>Past World Cup Performance:</strong> 1966 - Champions</p>
+                            <p><strong>FIFA History:</strong> Best Result: Champions (1966)</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
+            <!-- Japan -->
+            <div class="col-md-4">
+                <div class="card team-card">
+                    <img src="images/flag/Japan512.png" class="card-img-top team-logo" alt="Japan Logo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Japan</h5>
+                        <p class="card-text">Coach: Hajime Moriyasu</p>
+                        <p class="card-text">FIFA Ranking: 20</p>
+                        <div class="social-icons">
+                            <a href="https://twitter.com/JFA_en" target="_blank"><i class="bi bi-twitter"></i></a>
+                            <a href="https://www.instagram.com/japanfootballassociation/" target="_blank"><i class="bi bi-instagram"></i></a>
+                        </div>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#teamDetailsModal-Japan">More Details</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal for Japan -->
+            <div class="modal fade" id="teamDetailsModal-Japan" tabindex="-1" aria-labelledby="teamDetailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="teamDetailsModalLabel">Japan Team Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>Key Players:</strong> Player W, Player X</p>
+                            <p><strong>Past World Cup Performance:</strong> 2002, 2010, 2018 - Round of 16</p>
+                            <p><strong>FIFA History:</strong> Best Result: Round of 16 (2002, 2010, 2018)</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-gray" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- France -->
+            <div class="col-md-4">
+                <div class="card team-card">
+                    <img src="images/flag/France512.png" class="card-img-top team-logo" alt="France Logo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">France</h5>
+                        <p class="card-text">Coach: Didier Deschamps</p>
+                        <p class="card-text">FIFA Ranking: 2</p>
+                        <div class="social-icons">
+                            <a href="https://twitter.com/EquipedeFrance" target="_blank"><i class="bi bi-twitter"></i></a>
+                            <a href="https://www.instagram.com/equipedefrance/" target="_blank"><i class="bi bi-instagram"></i></a>
+                        </div>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#teamDetailsModal-France">More Details</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal for France -->
+            <div class="modal fade" id="teamDetailsModal-France" tabindex="-1" aria-labelledby="teamDetailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="teamDetailsModalLabel">France Team Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>Key Players:</strong> Player M, Player N</p>
+                            <p><strong>Past World Cup Performance:</strong> 2018 - Champions</p>
+                            <p><strong>FIFA History:</strong> Best Result: Champions (1998, 2018)</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+               
+
+        <!-- Footer Section -->
+<footer class="footer bg-dark text-white py-4">
+    <div class="container px-5 text-center">
+        <p class="mb-2">© 2024 World Cup. All Rights Reserved.</p>
+        <div>
+            <!-- Social Media Icons -->
+            <a href="https://facebook.com" target="_blank" class="text-white mx-2">
+                <i class="bi bi-facebook" style="font-size: 1.5rem;"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="text-white mx-2">
+                <i class="bi bi-twitter" style="font-size: 1.5rem;"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="text-white mx-2">
+                <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" class="text-white mx-2">
+                <i class="bi bi-youtube" style="font-size: 1.5rem;"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

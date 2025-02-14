@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudi Arabia - Host Country</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome Icons (Optional for additional icons) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/navbar.css">
+     <!-- Google Font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+     <!-- Bootstrap Icons -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+     <!-- Core Theme CSS -->
+     <link href="css/styles.css" rel="stylesheet" />
+     <link rel="stylesheet" href="css/navbar.css">
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+#header-bg {
+    background-image: url('images/hostimge.png'); /* Path to your uploaded image */
+    background-size: cover;
+   
+    background-position: top center; /* This will keep the top of the image aligned with the top of the container */
+    background-attachment: fixed; /* Optional: Keeps the background fixed while scrolling */
+    color: white; /* Text color to contrast with the background */
+    padding: 180px 50px; /* Adjust the padding as needed */
+    text-align: center;
+    height: 250vh;
+}
+
+#header-bg h1, #header-bg p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds shadow to make text stand out more */
+}
+
+/* Cards */
+.card {
+        border: none;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .card-title {
+        color: #005430;
+    }
+
+
+/* Sections */
+section {
+    margin-top: 30px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+section h2 {
+    border-left: 4px solid #005430;
+    padding-left: 10px;
+    font-size: 1.8rem;
+}
+section p {
+    line-height: 1.6;
+}
+
+/* Poll Styling */
+#poll button {
+    font-size: 1.2rem;
+    transition: transform 0.3s, background 0.3s;
+}
+#poll button:hover {
+    transform: scale(1.1);
+    background: #005430;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        text-align: center;
+    }
+    header h1 {
+        font-size: 2.5rem;
+    }
+    .card img {
+        height: 200px;
+    }
+    .carousel-inner img {
+        height: 300px;
+    }
+}
+
+/* Custom Buttons */
+.custom-btn {
+    background-color: #005430;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.custom-btn:hover {
+    background-color: #003d23; /* Darker shade of #005430 for hover effect */
+}
+
+/* Custom styling for the carousel caption */
+.custom-caption {
+    color: #ffffff; /* Text color is white */
+    font-size: 1.1rem; /* Slightly larger text */
+    font-weight: 500; /* Medium weight for the text */
+    text-align: left; /* Align text to the left inside the box */
+    padding: 30px; /* Increase padding for a larger box */
+    position: static; /* Ensure positioning works with top and left */
+    top: 5%; /* Adjust vertical positioning */
+    left: 10%; /* Align the box to the left side */
+    width: 70%; /* Set the width of the green box */
+    height: 400px; /* Set the height of the box */
+    background-color: rgba(0, 84, 48, 0.29); /* Semi-transparent green background */
+    border-radius: 20px; /* Rounded corners for a smoother appearance */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow to make the text stand out */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack text vertically */
+    justify-content: normal; /* Vertically center content */
+    align-items: flex-start; /* Align content to the left */
+}
+
+/* Heading inside the carousel caption */
+.custom-caption h5 {
+    font-size: 1.5rem; /* Larger text for the stadium name */
+    margin-bottom: 15px; /* Adds more space below the heading */
+    font-weight: bold; /* Make the title bold */
+    text-align: right; /* Align text to the right */
+}
+
+/* Paragraph Styling inside the carousel caption */
+.custom-caption p {
+    font-size: 1.1rem; /* Adjust font size for better readability */
+    margin-bottom: 10px; /* Adds more space between paragraphs */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .custom-caption {
+        top: 10%; /* Adjusts position for mobile */
+        right: 5%; /* Decreases the space on the right for small screens */
+        width: 70%; /* Increases the width to take up more space on mobile */
+        font-size: 0.9rem; /* Reduces font size for mobile */
+        padding: 25px; /* Adds more padding for mobile */
+    }
+
+    .custom-caption h5 {
+        font-size: 1.3rem; /* Adjusts heading size for smaller screens */
+    }
+}
+/* Ensure the carousel image takes up full width and height */
+.carousel-item img {
+    object-fit: cover; /* Ensures the image fills the space without distortion */
+    height: 400px; /* Set a fixed height for consistency */
+    border-radius: 12px; /* Add rounded corners */
+}
+
+/* Carousel Caption Styling - Positioned on top of the image */
+.carousel-caption {
+    position: absolute;
+    top: 50%; /* Vertically center the caption */
+    left: 50%; /* Horizontally center the caption */
+    transform: translate(-50%, -50%); /* Perfectly center the caption */
+    color: #fff; /* White text */
+    text-align: center; /* Center the text */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 80%;
+}
+
+
+/* Custom button style */
+.custom-btn {
+    background-color: #608f7a;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+
+.custom-btn:hover {
+    background-color: #4a6e56;
+}
+
+
+/* Stadiums Section */
+#stadiums-section {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    border-radius: 15px;
+    margin-top: 40px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Title */
+#stadiums-section h2 {
+    font-size: 2rem;
+    color: #005430; /* Dark green for the title */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #005430;
+    padding-bottom: 10px;
+}
+
+/* Stadium Cards */
+.stadium-card {
+    border: none;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Card Image */
+.stadium-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Card Body */
+.stadium-card-body {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Stadium Title */
+.stadium-card-body h5 {
+    color: #005430;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Stadium Description */
+.stadium-card-body p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Hover effects on stadium cards */
+.stadium-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+    </style>    
+</head>
+<body class="d-flex flex-column h-100">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+     <div class="container px-5">
+         <a class="navbar-brand" href="index.html">World Cup 2024</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                 <li class="nav-item"><a class="nav-link" href="hostcountry.html">Host Country</a></li>
+                 <li class="nav-item"><a class="nav-link" href="index2.html">Schedule</a></li>
+                 <li class="nav-item"><a class="nav-link" href="team.html">Teams</a></li>
+                 <li class="nav-item"><a class="nav-link" href="index3.html">Tickets</a></li>
+                 <li class="nav-item"><a class="nav-link" href="stadiums.html">Stadiums</a></li>
+                 <li class="nav-item"><a class="nav-link" href="news.html">Latest News</a></li>
+             </ul>
+         </div>
+     </div>
+ </nav>
+ 
+ <!-- Header -->
+ <header class="text-center mb-4" id="header-bg">
+     <h1 class="display-4">Welcome to Saudi Arabia</h1>
+     <p id="country-name" class="lead">Discover the beauty and culture of the Kingdom!</p>
+     <a href="https://www.pif.gov.sa/en/our-investments/giga-projects/?gad_source=1&gclid=EAIaIQobChMIr_WXhoeWigMVo6hoCR3MwwS2EAAYASAAEgLAFPD_BwE" class="btn btn-outline-light mt-3">
+         Learn More <i class="fas fa-arrow-right"></i>
+     </a>
+ </header>
+ 
+ <!-- General Info -->
+ <section id="general-info" class="mt-5">
+     <h2><i class="fas fa-info-circle"></i> About Saudi Arabia</h2>
+     <p id="country-description">
+         Saudi Arabia is hosting the World Cup! With a rich cultural heritage and world-class stadiums, 
+         the Kingdom is ready to welcome fans from all over the globe.
+     </p>
+ </section>
+ 
+ <!-- Host Cities -->
+ <section id="host-cities">
+     <h2><i class="fas fa-city"></i> Host Cities</h2>
+     <ul id="cities-list" class="list-group list-group-flush">
+         <li class="list-group-item"><i class="fas fa-map-marker-alt"></i> Riyadh</li>
+         <li class="list-group-item"><i class="fas fa-map-marker-alt"></i> Jeddah</li>
+         <li class="list-group-item"><i class="fas fa-map-marker-alt"></i> Dammam</li>
+         <li class="list-group-item"><i class="fas fa-map-marker-alt"></i> Madinah</li>
+     </ul>
+ </section>
+ 
+ <section id="stadiums-section">
+     <h2>Stadiums in Saudi Arabia</h2>
+     <div class="row">
+         <div class="col-md-4">
+             <div class="card stadium-card">
+                 <img src="images/s.png" alt="Stadium">
+                 <div class="stadium-card-body">
+                     <h5>King Saud University Stadium</h5>
+                     <p>Location: Riyadh</p>
+                     <a href="https://www.kfupm.edu.sa/" class="btn custom-btn">Visit Website</a>
+                 </div>
+             </div>
+         </div>
+         <div class="col-md-4">
+             <div class="card stadium-card">
+                 <img src="images/prince.png" alt="Stadium">
+                 <div class="stadium-card-body">
+                     <h5>Prince Abdullah Al-Faisal Stadium</h5>
+                     <p>Location: Jeddah</p>
+                     <a href="https://www.stc.com.sa/" class="btn custom-btn">Visit Website</a>
+                 </div>
+             </div>
+         </div>
+         <div class="col-md-4">
+             <div class="card stadium-card">
+                 <img src="images/jeddahs.png" alt="Stadium">
+                 <div class="stadium-card-body">
+                     <h5>King Abdullah Sports City</h5>
+                     <p>Location: Jeddah</p>
+                     <a href="https://www.kasc.com.sa/" class="btn custom-btn">Visit Website</a>
+                 </div>
+             </div>
+         </div>
+         <div class="col-md-4">
+             <div class="card stadium-card">
+                 <img src="images/salman.png" alt="Stadium">
+                 <div class="stadium-card-body">
+                     <h5>King Salman International Stadium</h5>
+                     <p>Location: Riyadh</p>
+                     <a href="https://www.saudigov.sa/" class="btn custom-btn">Visit Website</a>
+                 </div>
+             </div>
+         </div>
+         <div class="col-md-4">
+             <div class="card stadium-card">
+                 <img src="images/spff.png" alt="Stadium">
+                 <div class="stadium-card-body">
+                     <h5>Prince Faisal bin Fahd Sports City</h5>
+                     <p>Location: Riyadh</p>
+                     <a href="https://www.saudigov.sa/" class="btn custom-btn">Visit Website</a>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </section>
+ 
+ <!-- Best Places to Visit -->
+ <section id="best-places">
+     <h2><i class="fas fa-map-marker-alt"></i> Best Places in Saudi Arabia</h2>
+     <div id="placesCarousel" class="carousel slide" data-bs-ride="carousel">
+         <div class="carousel-inner">
+             <div class="carousel-item active">
+                 <img src="images/al-ula.jpg" class="d-block w-100" alt="Al-Ula">
+                 <div class="carousel-caption">
+                     <h5>Al-Ula</h5>
+                     <p>Famous for its ancient Nabatean tombs and the stunning Al-Ula rock formations.</p>
+                 </div>
+             </div>
+             <div class="carousel-item">
+                 <img src="images/diriyah.jpg" class="d-block w-100" alt="Diriyah">
+                 <div class="carousel-caption">
+                     <h5>Riyadh's Diriyah</h5>
+                     <p>A UNESCO World Heritage site, showcasing the origins of the Kingdom.</p>
+                 </div>
+             </div>
+             <div class="carousel-item">
+                 <img src="images/jeddah-corniche.jpg" class="d-block w-100" alt="Jeddah's Corniche">
+                 <div class="carousel-caption">
+                     <h5>Jeddah's Corniche</h5>
+                     <p>A beautiful coastal promenade with views of the Red Sea.</p>
+                 </div>
+             </div>
+             <div class="carousel-item">
+                 <img src="images/mecca-grand-mosque.jpg" class="d-block w-100" alt="Mecca's Grand Mosque">
+                 <div class="carousel-caption">
+                     <h5>Mecca's Grand Mosque</h5>
+                     <p>The holiest site in Islam, attracting millions of visitors each year.</p>
+                 </div>
+             </div>
+         </div>
+         <button class="carousel-control-prev" type="button" data-bs-target="#placesCarousel" data-bs-slide="prev">
+             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         </button>
+         <button class="carousel-control-next" type="button" data-bs-target="#placesCarousel" data-bs-slide="next">
+             <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         </button>
+     </div>
+ </section>
+ 
+ <section id="poll" class="text-center my-5">
+     <h2><i class="fas fa-poll"></i> Fan Poll</h2>
+     <p>Which city are you most excited to visit?</p>
+     <div>
+         <button class="btn custom-btn mx-2" onclick="submitPollVote('Riyadh')">Riyadh</button>
+         <button class="btn custom-btn mx-2" onclick="submitPollVote('Jeddah')">Jeddah</button>
+         <button class="btn custom-btn mx-2" onclick="submitPollVote('Dammam')">Dammam</button>
+         <button class="btn custom-btn mx-2" onclick="submitPollVote('Madinah')">Madinah</button>
+     </div>
+ </section>
+ 
+ <!-- Add this script to handle voting -->
+ <script>
+     function submitPollVote(city) {
+         fetch('poll.php', {
+             method: 'POST',
+             headers: {
+                 'Content-Type': 'application/json'
+             },
+             body: JSON.stringify({ city: city })
+         })
+         .then(response => response.json())
+         .then(data => {
+             if (data.status === 'success') {
+                 alert('Your vote has been submitted!');
+             } else {
+                 alert('Error submitting vote!');
+             }
+         })
+         .catch(error => console.error('Error:', error));
+     }
+ </script>
+ 
+ <section id="feedback" class="my-5">
+     <h2><i class="fas fa-envelope"></i> Feedback</h2>
+     <form id="feedbackForm">
+         <div class="mb-3">
+             <label for="name" class="form-label">Name</label>
+             <input type="text" class="form-control" id="name" placeholder="Your Name">
+         </div>
+         <div class="mb-3">
+             <label for="email" class="form-label">Email</label>
+             <input type="email" class="form-control" id="email" placeholder="Your Email">
+         </div>
+         <div class="mb-3">
+             <label for="message" class="form-label">Your Feedback</label>
+             <textarea class="form-control" id="message" rows="4" placeholder="Enter your feedback here"></textarea>
+         </div>
+         <button type="submit" class="btn custom-btn">Submit</button>
+     </form>
+ </section>
+ 
+ <!-- Add this script to handle form submission -->
+ <script>
+     document.getElementById('feedbackForm').addEventListener('submit', function (event) {
+         event.preventDefault();
+ 
+         const name = document.getElementById('name').value;
+         const email = document.getElementById('email').value;
+         const message = document.getElementById('message').value;
+ 
+         fetch('feedback.php', {
+             method: 'POST',
+             headers: {
+                 'Content-Type': 'application/json'
+             },
+             body: JSON.stringify({ name, email, message })
+         })
+         .then(response => response.json())
+         .then(data => {
+             if (data.status === 'success') {
+                 alert('Your feedback has been submitted!');
+             } else {
+                 alert('Error submitting feedback!');
+             }
+         })
+         .catch(error => console.error('Error:', error));
+     });
+ </script>
+ 
+ <!-- Footer Section -->
+ <footer class="footer bg-dark text-white py-4">
+     <div class="container px-5 text-center">
+         <p class="mb-2">© 2024 World Cup. All Rights Reserved.</p>
+         <div>
+             <!-- Social Media Icons -->
+             <a href="https://facebook.com" target="_blank" class="text-white mx-2">
+                 <i class="bi bi-facebook" style="font-size: 1.5rem;"></i>
+             </a>
+             <a href="https://twitter.com" target="_blank" class="text-white mx-2">
+                 <i class="bi bi-twitter" style="font-size: 1.5rem;"></i>
+             </a>
+             <a href="https://instagram.com" target="_blank" class="text-white mx-2">
+                 <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
+             </a>
+             <a href="https://youtube.com" target="_blank" class="text-white mx-2">
+                 <i class="bi bi-youtube" style="font-size: 1.5rem;"></i>
+             </a>
+         </div>
+     </div>
+ </footer>
+ 
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        $(document).ready(function () {
+            console.log("Saudi Arabia Host Country Page Loaded!");
+        });
+    </script>
+</body>
+</html>
+

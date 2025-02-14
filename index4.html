@@ -1,0 +1,63 @@
+<script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-messaging.js"></script>
+
+<script type="module">
+  // Import Firebase Functions
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.24.0/firebase-app.js";
+  import { getMessaging, getToken, onMessage } from "https://www.gstatic.com/firebasejs/9.24.0/firebase-messaging.js";
+
+  // Firebase Configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDCLDVT-iQuNrxRikeXK1kBJe69UWYE1Vc",
+    authDomain: "world-cup-2023-53c43.firebaseapp.com",
+    projectId: "world-cup-2023-53c43",
+    storageBucket: "world-cup-2023-53c43.firebasestorage.app",
+    messagingSenderId: "870494703136",
+    appId: "1:870494703136:web:8d382f85610c7faa18b645",
+    measurementId: "G-485V2GHW65"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const messaging = getMessaging(app);
+
+  // Request permission for notifications
+  async function requestNotificationPermission() {
+    try {
+      const permission = await Notification.requestPermission();
+      if (permission === "granted") {
+        console.log("Notification permission granted.");
+        // Get FCM Token
+        const token = await getToken(messaging, {
+          vapidKey: "BH5ykLh5HRneQXWqB8lN3EFxWwiUEzBlpXuLlOS_t_2FcwenYRanUtitIFeMkQctzj1R0TfAU0A2RbGYHu4RvCw"
+        });
+        console.log("FCM Token:", token);
+        // Send token to your server to subscribe the user for notifications
+        await fetch('/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ token })
+        });
+      } else {
+        console.log("Notification permission denied.");
+      }
+    } catch (error) {
+      console.error("Error requesting notification permission:", error);
+    }
+  }
+
+  // Call this function on page load
+  requestNotificationPermission();
+
+  // Handle incoming messages (when the app is in the foreground)
+  onMessage(messaging, (payload) => {
+    console.log("Message received: ", payload);
+    const notificationTitle = payload.notification.title;
+    const notificationOptions = {
+      body: payload.notification.body,
+      icon: payload.notification.icon
+    };
+
+    new Notification(notificationTitle, notificationOptions);
+  });
+</script>
